@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1099046870612",
+    "project_id": "acav-23960",
+    "storage_bucket": "acav-23960.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1099046870612:android:4a390514f18b768b6a17c1",
+        "android_client_info": {
+          "package_name": "com.example.controle_de_abastecimento_e_veiculos"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDpLAcg-FTWiiZWcR7f7bIJnhtgK2h7_EI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
