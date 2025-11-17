@@ -1,5 +1,6 @@
 import 'package:controle_de_abastecimento_e_veiculos/features/veiculo/view/veiculo_form_page.dart';
 import 'package:controle_de_abastecimento_e_veiculos/features/veiculo/viewmodel/veiculo_viewmodel.dart';
+import 'package:controle_de_abastecimento_e_veiculos/widgets/app_drawer.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -15,6 +16,7 @@ class _VeiculoListPageState extends State<VeiculoListPage> {
     final vm = context.watch<VeiculoViewModel>();
 
     return Scaffold(
+      drawer: AppDrawer(),
       appBar: AppBar(title: Text("Meus Veículos")),
       body: vm.loading
           ? Center(child: CircularProgressIndicator())

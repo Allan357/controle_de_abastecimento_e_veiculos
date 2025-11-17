@@ -1,6 +1,6 @@
 import 'package:controle_de_abastecimento_e_veiculos/features/abastecimento/abastecimento/abastecimento_viewmodel.dart';
-import 'package:controle_de_abastecimento_e_veiculos/features/abastecimento/view/abastecimento_form_page.dart';
 import 'package:controle_de_abastecimento_e_veiculos/features/veiculo/viewmodel/veiculo_viewmodel.dart';
+import 'package:controle_de_abastecimento_e_veiculos/widgets/app_drawer.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -13,16 +13,8 @@ class AbastecimentoListPage extends StatelessWidget {
     final vmVeiculos = context.watch<VeiculoViewModel>();
 
     return Scaffold(
+      drawer: AppDrawer(),
       appBar: AppBar(title: Text("Histórico de Abastecimentos")),
-      floatingActionButton: FloatingActionButton(
-        child: Icon(Icons.add),
-        onPressed: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(builder: (_) => AbastecimentoFormPage()),
-          );
-        },
-      ),
       body: vm.loading
           ? Center(child: CircularProgressIndicator())
           : ListView.builder(

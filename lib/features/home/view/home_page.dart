@@ -1,4 +1,5 @@
 import 'package:controle_de_abastecimento_e_veiculos/features/auth/repository/auth_repository.dart';
+import 'package:controle_de_abastecimento_e_veiculos/widgets/app_drawer.dart';
 import 'package:flutter/material.dart';
 import '../../../routes/app_navigator.dart';
 import 'package:provider/provider.dart';
@@ -29,6 +30,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: AppDrawer(),
       appBar: AppBar(
         title: const Text("Tela Inicial"),
       ),

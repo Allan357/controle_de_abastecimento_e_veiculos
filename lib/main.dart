@@ -8,6 +8,7 @@ import 'package:controle_de_abastecimento_e_veiculos/core/services/firebase_real
 import 'package:controle_de_abastecimento_e_veiculos/features/veiculo/view/veiculo_form_page.dart';
 import 'package:controle_de_abastecimento_e_veiculos/features/veiculo/view/veiculo_list_page.dart';
 import 'package:controle_de_abastecimento_e_veiculos/features/veiculo/viewmodel/veiculo_viewmodel.dart';
+import 'package:controle_de_abastecimento_e_veiculos/theme/app_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -78,6 +79,7 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: AppTheme.lightTheme,
       initialRoute: AppRoutes.login,
       routes: {
         AppRoutes.login: (_) => LoginPage(),

@@ -1,6 +1,7 @@
 import 'package:controle_de_abastecimento_e_veiculos/features/abastecimento/abastecimento/abastecimento_viewmodel.dart';
 import 'package:controle_de_abastecimento_e_veiculos/features/abastecimento/model/abastecimento_model.dart';
 import 'package:controle_de_abastecimento_e_veiculos/features/veiculo/viewmodel/veiculo_viewmodel.dart';
+import 'package:controle_de_abastecimento_e_veiculos/widgets/app_drawer.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -29,6 +30,7 @@ class _AbastecimentoFormPageState extends State<AbastecimentoFormPage> {
     final vmVeiculos = context.watch<VeiculoViewModel>();
 
     return Scaffold(
+      drawer: AppDrawer(),
       appBar: AppBar(title: Text("Registrar Abastecimento")),
       body: Center(
         child: SizedBox(
