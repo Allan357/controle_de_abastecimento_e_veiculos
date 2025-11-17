@@ -1,3 +1,7 @@
+import 'package:controle_de_abastecimento_e_veiculos/features/abastecimento/abastecimento/abastecimento_viewmodel.dart';
+import 'package:controle_de_abastecimento_e_veiculos/features/abastecimento/repository/abastecimento_repository.dart';
+import 'package:controle_de_abastecimento_e_veiculos/features/abastecimento/view/abastecimento_form_page.dart';
+import 'package:controle_de_abastecimento_e_veiculos/features/abastecimento/view/abastecimento_list_page.dart';
 import 'package:controle_de_abastecimento_e_veiculos/features/home/view/home_page.dart';
 import 'package:controle_de_abastecimento_e_veiculos/features/veiculo/repository/veiculo_repository.dart';
 import 'package:controle_de_abastecimento_e_veiculos/core/services/firebase_realtime_service.dart';
@@ -53,6 +57,15 @@ void main() async {
         ChangeNotifierProvider(
           create: (context) => VeiculoViewModel(context.read<VeiculoRepository>()),
         ),
+        ProxyProvider<FirebaseRealtimeService, AbastecimentoRepository>(
+          update: (_, service, prev) => AbastecimentoRepository(service),
+        ),
+
+        ChangeNotifierProvider(
+          create: (context) =>
+              AbastecimentoViewModel(context.read<AbastecimentoRepository>()),
+        ),
+
       ],
       child: const App(),
     )
@@ -72,6 +85,8 @@ class App extends StatelessWidget {
         AppRoutes.home: (_) => HomePage(),
         AppRoutes.veiculos: (_) => VeiculoListPage(),
         AppRoutes.newVeiculo: (_) => VeiculoFormPage(),
+        AppRoutes.abastecimentos: (_) => AbastecimentoListPage(),
+        AppRoutes.newAbastecimento: (_) => AbastecimentoFormPage(),
       },
     );
   }

@@ -74,7 +74,7 @@ class _LoginPageState extends State<LoginPage> {
 
                           if (!context.mounted) return;
 
-                          if (ok) AppNavigator.goToHome(context);
+                          if (ok) AppNavigator.goToNewAbastecimento(context);
                         },
                   child: vm.loading
                       ? CircularProgressIndicator()

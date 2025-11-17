@@ -4,4 +4,7 @@ class AppRoutes {
   static const home = '/home';
   static const veiculos = '/veiculos';
   static const newVeiculo = '/newveiculo';
+  static const newAbastecimento = '/newabastecimento';
+  static const abastecimentos = '/abastecimentos';
+
 }

@@ -6,6 +6,14 @@ class AppNavigator {
     Navigator.pushReplacementNamed(context, AppRoutes.home);
   }
 
+  static void goToAbastecimento(BuildContext context) {
+    Navigator.pushNamed(context, AppRoutes.abastecimentos);
+  }
+
+  static void goToNewAbastecimento(BuildContext context) {
+    Navigator.pushNamed(context, AppRoutes.newAbastecimento);
+  }
+
   static void goToNewVeiculo(BuildContext context) {
     Navigator.pushNamed(context, AppRoutes.newVeiculo);
   }
