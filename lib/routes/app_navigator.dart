@@ -6,6 +6,14 @@ class AppNavigator {
     Navigator.pushReplacementNamed(context, AppRoutes.home);
   }
 
+  static void goToNewVeiculo(BuildContext context) {
+    Navigator.pushNamed(context, AppRoutes.newVeiculo);
+  }
+
+  static void goToVeiculos(BuildContext context) {
+    Navigator.pushNamed(context, AppRoutes.veiculos);
+  }
+
   static void goToRegister(BuildContext context) {
     Navigator.pushNamed(context, AppRoutes.register);
   }

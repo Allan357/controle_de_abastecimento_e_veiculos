@@ -44,6 +44,7 @@ class DefaultFirebaseOptions {
   static FirebaseOptions get web => FirebaseOptions(
         apiKey: dotenv.env['FIREBASE_API_KEY_WEB'] ?? dotenv.env['FIREBASE_API_KEY_WINDOWS'] ?? '',
         appId: dotenv.env['FIREBASE_APP_ID_WEB'] ?? '',
+        databaseURL: dotenv.env['DATABASEURL'] ?? '',
         messagingSenderId: dotenv.env['FIREBASE_MESSAGING_SENDER_ID_WEB'] ?? '',
         projectId: dotenv.env['FIREBASE_PROJECT_ID'] ?? dotenv.env['FIREBASE_PROJECT_ID_WEB'] ?? '',
         authDomain: dotenv.env['FIREBASE_AUTH_DOMAIN'] ?? '',
@@ -53,6 +54,7 @@ class DefaultFirebaseOptions {
 
   static FirebaseOptions get android => FirebaseOptions(
         apiKey: dotenv.env['FIREBASE_API_KEY_ANDROID'] ?? '',
+        databaseURL: dotenv.env['DATABASEURL'] ?? '',
         appId: dotenv.env['FIREBASE_APP_ID_ANDROID'] ?? '',
         messagingSenderId: dotenv.env['FIREBASE_MESSAGING_SENDER_ID_ANDROID'] ?? '',
         projectId: dotenv.env['FIREBASE_PROJECT_ID_ANDROID'] ?? dotenv.env['FIREBASE_PROJECT_ID'] ?? '',
@@ -62,6 +64,7 @@ class DefaultFirebaseOptions {
   static FirebaseOptions get ios => FirebaseOptions(
         apiKey: dotenv.env['FIREBASE_API_KEY_IOS'] ?? '',
         appId: dotenv.env['FIREBASE_APP_ID_IOS'] ?? '',
+        databaseURL: dotenv.env['DATABASEURL'] ?? '',
         messagingSenderId: dotenv.env['FIREBASE_MESSAGING_SENDER_ID_IOS'] ?? '',
         projectId: dotenv.env['FIREBASE_PROJECT_ID_IOS'] ?? dotenv.env['FIREBASE_PROJECT_ID'] ?? '',
         storageBucket: dotenv.env['FIREBASE_STORAGE_BUCKET_IOS'] ?? dotenv.env['FIREBASE_STORAGE_BUCKET'] ?? '',
@@ -71,6 +74,7 @@ class DefaultFirebaseOptions {
   static FirebaseOptions get macos => FirebaseOptions(
         apiKey: dotenv.env['FIREBASE_API_KEY_IOS'] ?? '',
         appId: dotenv.env['FIREBASE_APP_ID_IOS'] ?? '',
+        databaseURL: dotenv.env['DATABASEURL'] ?? '',
         messagingSenderId: dotenv.env['FIREBASE_MESSAGING_SENDER_ID_IOS'] ?? '',
         projectId: dotenv.env['FIREBASE_PROJECT_ID_IOS'] ?? dotenv.env['FIREBASE_PROJECT_ID'] ?? '',
         storageBucket: dotenv.env['FIREBASE_STORAGE_BUCKET_IOS'] ?? dotenv.env['FIREBASE_STORAGE_BUCKET'] ?? '',
@@ -82,6 +86,7 @@ class DefaultFirebaseOptions {
         appId: dotenv.env['FIREBASE_APP_ID_WINDOWS'] ?? '',
         messagingSenderId: dotenv.env['FIREBASE_MESSAGING_SENDER_ID_WINDOWS'] ?? '',
         projectId: dotenv.env['FIREBASE_PROJECT_ID_WINDOWS'] ?? dotenv.env['FIREBASE_PROJECT_ID'] ?? '',
+        databaseURL: dotenv.env['DATABASEURL'] ?? '',
         authDomain: dotenv.env['FIREBASE_AUTH_DOMAIN'] ?? '',
         storageBucket: dotenv.env['FIREBASE_STORAGE_BUCKET_WINDOWS'] ?? dotenv.env['FIREBASE_STORAGE_BUCKET'] ?? '',
         measurementId: dotenv.env['FIREBASE_MEASUREMENT_ID_WINDOWS'] ?? dotenv.env['FIREBASE_MEASUREMENT_ID'] ?? '',
