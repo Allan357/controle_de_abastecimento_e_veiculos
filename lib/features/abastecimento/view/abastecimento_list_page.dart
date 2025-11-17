@@ -1,6 +1,7 @@
 import 'package:controle_de_abastecimento_e_veiculos/features/abastecimento/abastecimento/abastecimento_viewmodel.dart';
 import 'package:controle_de_abastecimento_e_veiculos/features/veiculo/viewmodel/veiculo_viewmodel.dart';
 import 'package:controle_de_abastecimento_e_veiculos/widgets/app_drawer.dart';
+import 'package:controle_de_abastecimento_e_veiculos/widgets/consumo_grafico.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -17,7 +18,8 @@ class AbastecimentoListPage extends StatelessWidget {
       appBar: AppBar(title: Text("Histórico de Abastecimentos")),
       body: vm.loading
           ? Center(child: CircularProgressIndicator())
-          : ListView.builder(
+          : Column(children: [
+            Expanded(child: ListView.builder(
               itemCount: vm.abastecimentos.length,
               itemBuilder: (_, i) {
                 final a = vm.abastecimentos[i];
@@ -42,7 +44,9 @@ class AbastecimentoListPage extends StatelessWidget {
                   ),
                 );
               },
-            ),
+            ),)
+            ,SizedBox(height: 200, child: ConsumoChartPage()),
+          ],)
     );
   }
 }

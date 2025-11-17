@@ -115,7 +115,11 @@ class _VeiculoFormPageState extends State<VeiculoFormPage> {
                         duration: const Duration(seconds: 2),
                       )
                     );
-
+                    modelo.clear();
+                    marca.clear();
+                    placa.clear();
+                    ano.clear();
+                    tipo.clear();
                     // if (!context.mounted) return;
                     // Navigator.pop(context);
                   },

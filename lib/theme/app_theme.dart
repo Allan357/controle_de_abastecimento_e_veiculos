@@ -14,7 +14,7 @@ class AppTheme {
       brightness: Brightness.light,
     ),
 
-    scaffoldBackgroundColor: secondary,
+    scaffoldBackgroundColor: Colors.transparent,
 
     appBarTheme: AppBarTheme(
       backgroundColor: primary,
@@ -26,6 +26,7 @@ class AppTheme {
         color: secondary,
         fontWeight: FontWeight.bold,
       ),
+    
     ),
 
     inputDecorationTheme: InputDecorationTheme(

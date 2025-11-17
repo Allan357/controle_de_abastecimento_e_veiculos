@@ -52,30 +52,35 @@ class _AbastecimentoFormPageState extends State<AbastecimentoFormPage> {
                   onChanged: (v) => setState(() => veiculoId = v),
                   validator: (v) => v == null ? "Selecione um veículo" : null,
                 ),
+                SizedBox(height: 16),
                 TextFormField(
                   controller: litros,
                   keyboardType: TextInputType.number,
                   decoration: InputDecoration(labelText: "Litros Abastecidos"),
                   validator: (v) => v!.isEmpty ? "Informe a quantidade" : null,
                 ),
+                SizedBox(height: 16),
                 TextFormField(
                   controller: valor,
                   keyboardType: TextInputType.number,
                   decoration: InputDecoration(labelText: "Valor Pago"),
                   validator: (v) => v!.isEmpty ? "Informe o valor" : null,
                 ),
+                SizedBox(height: 16),
                 TextFormField(
                   controller: km,
                   keyboardType: TextInputType.number,
                   decoration: InputDecoration(labelText: "Quilometragem Atual"),
                   validator: (v) => v!.isEmpty ? "Informe o km" : null,
                 ),
+                SizedBox(height: 16),
                 TextFormField(
                   controller: tipoCombustivel,
                   keyboardType: TextInputType.text,
                   decoration: InputDecoration(labelText: "Tipo de combustivel"),
                   validator: (v) => v!.isEmpty ? "Informe o Tipo de combustivel" : null,
                 ),
+                SizedBox(height: 16),
                 TextFormField(
                   controller: obs,
                   decoration: InputDecoration(labelText: "Observação (opcional)"),
@@ -121,6 +126,12 @@ class _AbastecimentoFormPageState extends State<AbastecimentoFormPage> {
                         duration: const Duration(seconds: 2),
                       )
                     );
+
+                    litros.clear();
+                    km.clear();
+                    valor.clear();
+                    tipoCombustivel.clear();
+                    obs.clear();
                     // Navigator.pop(context);
                   },
                   child: Text("Salvar"),

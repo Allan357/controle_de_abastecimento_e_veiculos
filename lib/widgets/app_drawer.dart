@@ -49,6 +49,10 @@ class AppDrawer extends StatelessWidget {
             ),
           ),
           ListTile(
+            leading: Icon(
+              Icons.home,
+              color: theme.colorScheme.onSurface,
+            ),
             title: Text(
               'Página Inicial',
               style: TextStyle(
@@ -60,6 +64,10 @@ class AppDrawer extends StatelessWidget {
             },
           ),
           ListTile(
+            leading: Icon(
+              Icons.directions_car,
+              color: theme.colorScheme.onSurface,
+            ),
             title: Text(
               'Meus Veículos',
               style: TextStyle(
@@ -71,6 +79,10 @@ class AppDrawer extends StatelessWidget {
             },
           ),
           ListTile(
+            leading: Icon(
+              Icons.add_box,
+              color: theme.colorScheme.onSurface,
+            ),
             title: Text(
               'Registrar Veículos',
               style: TextStyle(
@@ -82,6 +94,10 @@ class AppDrawer extends StatelessWidget {
             },
           ),
           ListTile(
+            leading: Icon(
+              Icons.add_box,
+              color: theme.colorScheme.onSurface,
+            ),
             title: Text(
               'Registrar Abastecimento',
               style: TextStyle(
@@ -93,6 +109,10 @@ class AppDrawer extends StatelessWidget {
             },
           ),
           ListTile(
+            leading: Icon(
+              Icons.list,
+              color: theme.colorScheme.onSurface,
+            ),
             title: Text(
               'Histórico de Abastecimentos',
               style: TextStyle(
@@ -104,6 +124,10 @@ class AppDrawer extends StatelessWidget {
             },
           ),
           ListTile(
+            leading: Icon(
+              Icons.logout,
+              color: theme.colorScheme.onSurface,
+            ),
             title: Text(
               'Sair',
               style: TextStyle(
